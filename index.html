@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dao3creator</title>
+    <!--script src="//cdn.jsdelivr.net/npm/eruda"></script-->
+    <!--script>eruda.init();</script-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        iframe {
+            width: 1201px;
+            height: 95%
+        }
+
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="content" src="https://dao3.fun/creator"></iframe>
+    移动端可以在上方的iframe内新建地图、扩展地图、发布地图等。但是iframe编辑地图效果不好，需要获取地图创作端链接。在iframe里进入你要进入的地图，然后在地图index.js输入以下代码<br>
+    &nbsp;<code>
+        world.onPlayerJoin(({ entity }) => entity.player.link(world.url.toString().replace("view.dao3.fun/e","dao3.fun/edit")));
+    </code><br>
+    运行之后就会通过player.link打开创作端了。建议收藏你的创作端链接。<br>
+    此页面由145a制作，支持每一位创作者以及他们对社区的贡献。
+</body>
+
+</html>
